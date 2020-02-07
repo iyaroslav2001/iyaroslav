@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-  int n,i,j,sum;
+  int n,i,j,count = 0;
   const int m = 3;
   int arr[m][m] = {};
   for (i = 0; i < m; i++){
@@ -21,15 +21,14 @@ int main()
 
   i = 0;
   j = 0;
-  sum = 0;
 
   for (i = 0; i < m; i++){
     for (j = 0; j < m; j++){
       if (arr[i][j] != arr[i+1][j] && arr[i][j+1] != arr[i+1][j+1] && arr[i][j] != arr[i][j+1] && arr[i][j] != arr[i+1][j+1] && arr[i][j+1] != arr[i+1][j]){
-        sum++;
+        count++;
       }
     }
   }
   
-  cout « sum « endl;
+  cout « count « endl;
 }
